@@ -28,17 +28,6 @@ class BigFile:
         sortedFile = functools.reduce(self.__mergeFiles, self.__sortedParts)
         print(f'The name of your huge sorted file is {sortedFile}')
 
-        with open(sortedFile, 'rb') as file:
-            count = 0
-            while True:
-                try:
-                    num = pickle.load(file)
-                except EOFError:
-                    break
-                else:
-                    count += 1
-            print(count)
-
     ### Private methods ###
 
     def __generate(self, fileName):
