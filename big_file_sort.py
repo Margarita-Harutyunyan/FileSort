@@ -92,9 +92,7 @@ class BigFile:
                     file1.seek(ind1)
                     file2.seek(ind2)
                     num1 = pickle.load(file1)
-                #    print(f'num1 {num1}')
                     num2 = pickle.load(file2)
-                #    print(f'num2 {num2}')
                 except EOFError:
                     break
                 else:
